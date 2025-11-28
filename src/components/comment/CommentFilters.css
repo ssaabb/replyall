@@ -1,0 +1,120 @@
+.comment-filters {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+body.dark-mode .comment-filters {
+    background: var(--color-bg-secondary-dark);
+    border-color: var(--color-border-dark);
+}
+
+.filters-section,
+.sort-section {
+    flex: 1;
+}
+
+.filters-section h3,
+.sort-section h3 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+body.dark-mode .filters-section h3,
+body.dark-mode .sort-section h3 {
+    color: var(--color-text-primary-dark);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-fast);
+}
+
+body.dark-mode .filter-checkbox {
+    color: var(--color-text-secondary-dark);
+}
+
+.filter-checkbox:hover {
+    color: var(--color-text-primary);
+}
+
+body.dark-mode .filter-checkbox:hover {
+    color: var(--color-text-primary-dark);
+}
+
+.filter-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.sort-options {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.sort-btn {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+body.dark-mode .sort-btn {
+    background: var(--color-bg-tertiary-dark);
+    border-color: var(--color-border-dark);
+    color: var(--color-text-secondary-dark);
+}
+
+.sort-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.sort-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.sort-btn.active:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+    .comment-filters {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .sort-options {
+        flex-direction: column;
+    }
+
+    .sort-btn {
+        width: 100%;
+    }
+}

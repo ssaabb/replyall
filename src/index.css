@@ -1,0 +1,232 @@
+:root {
+  /* Color Palette */
+  --color-primary: hsl(220, 90%, 56%);
+  --color-primary-dark: hsl(220, 90%, 46%);
+  --color-primary-light: hsl(220, 90%, 66%);
+  
+  --color-secondary: hsl(280, 70%, 60%);
+  --color-accent: hsl(340, 80%, 58%);
+  
+  --color-success: hsl(142, 71%, 45%);
+  --color-warning: hsl(38, 92%, 50%);
+  --color-error: hsl(0, 84%, 60%);
+  --color-info: hsl(199, 89%, 48%);
+  
+  /* Neutral Colors */
+  --color-bg-primary: hsl(0, 0%, 100%);
+  --color-bg-secondary: hsl(220, 14%, 96%);
+  --color-bg-tertiary: hsl(220, 14%, 92%);
+  
+  --color-text-primary: hsl(220, 13%, 18%);
+  --color-text-secondary: hsl(220, 9%, 46%);
+  --color-text-tertiary: hsl(220, 9%, 66%);
+  
+  --color-border: hsl(220, 13%, 91%);
+  --color-border-hover: hsl(220, 13%, 81%);
+  
+  /* Dark Mode */
+  --color-bg-primary-dark: hsl(220, 13%, 10%);
+  --color-bg-secondary-dark: hsl(220, 13%, 14%);
+  --color-bg-tertiary-dark: hsl(220, 13%, 18%);
+  
+  --color-text-primary-dark: hsl(0, 0%, 95%);
+  --color-text-secondary-dark: hsl(220, 9%, 70%);
+  --color-text-tertiary-dark: hsl(220, 9%, 50%);
+  
+  --color-border-dark: hsl(220, 13%, 25%);
+  --color-border-hover-dark: hsl(220, 13%, 35%);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-family-mono: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  color: var(--color-text-primary-dark);
+  background-color: var(--color-bg-primary-dark);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+
+.text-center {
+  text-align: center;
+}
+
+.text-sm { font-size: var(--font-size-sm); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-hover);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary-dark);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--color-border-hover-dark);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary-dark);
+}
